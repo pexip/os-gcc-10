@@ -1,3 +1,9 @@
+gcc-10 (10.2.1-6pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Wed, 01 Jun 2022 15:04:52 +0000
+
 gcc-10 (10.2.1-6) unstable; urgency=medium
 
   * Update to git 20210110 from the gcc-10 branch.
