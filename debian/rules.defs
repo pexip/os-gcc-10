@@ -13,9 +13,8 @@ stampdir	= stamps
 
 distribution	:= $(shell lsb_release -is)
 distrelease	:= $(shell lsb_release -cs)
-derivative	:= $(shell if dpkg-vendor --derives-from Ubuntu; then echo Ubuntu; \
-			elif dpkg-vendor --derives-from Debian; then echo Debian; \
-			else echo Unknown; fi)
+
+derivative	:= Debian
 
 # On non official archives, "lsb_release -cs" default to "n/a". Assume
 # sid in that case 
