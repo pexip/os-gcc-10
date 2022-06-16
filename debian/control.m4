@@ -58,6 +58,7 @@ Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: MAINTAINER
 ', `dnl
 Maintainer: MAINTAINER
+')dnl
 ')dnl DIST
 ifelse(DIST,`PexOS',`XSBC-Pexip-Original-',`')dnl
 ifelse(regexp(SRCNAME, `gnat'),0,`dnl
