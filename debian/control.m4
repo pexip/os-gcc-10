@@ -53,8 +53,13 @@ Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
 ')dnl SRCNAME
 XSBC-Original-Maintainer: MAINTAINER
 ', `dnl
+ifelse(DIST,`PexOS',`dnl
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: MAINTAINER
+', `dnl
 Maintainer: MAINTAINER
 ')dnl DIST
+ifelse(DIST,`PexOS',`XSBC-Pexip-Original-',`')dnl
 ifelse(regexp(SRCNAME, `gnat'),0,`dnl
 Uploaders: Ludovic Brenta <lbrenta@debian.org>
 ', regexp(SRCNAME, `gdc'),0,`dnl
@@ -103,6 +108,9 @@ Homepage: http://gcc.gnu.org/
 Vcs-Browser: https://salsa.debian.org/toolchain-team/gcc/tree/gcc-10-debian
 Vcs-Git: https://salsa.debian.org/toolchain-team/gcc.git -b gcc-10-debian
 XS-Testsuite: autopkgtest
+ifelse(DIST,`PexOS',`dnl
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
+',`')dnl
 
 ifelse(regexp(SRCNAME, `gcc-snapshot'),0,`dnl
 Package: gcc-snapshot`'TS
