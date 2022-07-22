@@ -1,0 +1,27 @@
+--- a/src/libstdc++-v3/include/std/type_traits
++++ b/src/libstdc++-v3/include/std/type_traits
+@@ -1389,6 +1389,16 @@
+ 
+   // Type relations.
+ 
++#ifdef __INTEL_COMPILER
++  /// is_same
++  template<typename, typename>
++    struct is_same
++    : public false_type { };
++
++  template<typename _Tp>
++    struct is_same<_Tp, _Tp>
++    : public true_type { };
++#else // GCC
+   /// is_same
+   template<typename _Tp, typename _Up>
+     struct is_same
+@@ -1398,6 +1408,7 @@
+     : public false_type
+ #endif
+     { };
++#endif
+ 
+ #ifndef _GLIBCXX_BUILTIN_IS_SAME_AS
+   template<typename _Tp>
