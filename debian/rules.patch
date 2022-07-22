@@ -266,6 +266,10 @@ debian_patches += go-testsuite
 # Mostly for Ada, but not only (bootstrap-no-unneeded-libs).
 debian_patches += ada-changes-in-autogen-output
 
+# Pexip patches
+debian_patches += pexip_backport_cyclades
+debian_patches += pexip_icc_type_traits
+
 series_stamp = $(stampdir)/02-series-stamp
 series: $(series_stamp)
 $(series_stamp):
