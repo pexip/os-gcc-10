@@ -1,3 +1,9 @@
+gcc-10 (10.2.1-6pexip7) pexip-bullseye; urgency=medium
+
+  * Bullseye rebuild for ARM64 inclusion
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 05 Sep 2022 10:31:43 +0100
+
 gcc-10 (10.2.1-6pexip6) pexip-bullseye; urgency=medium
 
   * Fixup pexip patch application
